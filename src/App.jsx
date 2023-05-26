@@ -3,17 +3,17 @@ import './App.css'
 import Hola from './components/Hola'
 
 function App() {
-  const [count, setCount] = useState("")
+  const [nuevoTexto, setNuevoTexto] = useState("")
 
-  const incrementar = ()=>{
-    setCount("from changed state!")
+  const mostrar = ()=>{
+    setNuevoTexto(" (from changed state)")
   }
   const myFriend = 'my friend'
 
   return (
     <>
-    <Hola texto={myFriend}></Hola>
-    <button onClick={incrementar} >Incrementar</button>
+    <Hola texto={myFriend + nuevoTexto}></Hola>
+    <button onClick={mostrar} >Mostrar Texto</button>
     </>
   )
 }
