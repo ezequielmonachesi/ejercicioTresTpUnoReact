@@ -1,19 +1,19 @@
 import { useState } from 'react'
 import './App.css'
-import hola from './components/holaMundo'
+import Hola from './components/Hola'
 
 function App() {
-  const [texto, setTexto] = useState("")
+  const [nuevoTexto, setNuevoTexto] = useState("")
 
-  const mostrarTexto = ()=>{
-    setTexto("from changed state!")
-    const texto = 'My Friend!'
+  const mostrar = ()=>{
+    setNuevoTexto(" (from changed state)")
   }
+  const myFriend = 'my friend'
 
   return (
     <>
-    <holaMundo text={texto} />
-    <button onClick={mostrarTexto} >Mostrar texto</button>
+    <Hola texto={myFriend + nuevoTexto}></Hola>
+    <button onClick={mostrar} >Mostrar Texto</button>
     </>
   )
 }
