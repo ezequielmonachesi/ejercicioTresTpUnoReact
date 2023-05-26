@@ -1,16 +1,18 @@
 import { useState } from 'react'
 import './App.css'
+import Hola from './components/Hola'
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [count, setCount] = useState("")
 
   const incrementar = ()=>{
-    setCount(count + 1)
+    setCount("from changed state!")
   }
+  const myFriend = 'my friend'
 
   return (
     <>
-    <p>{count}</p>
+    <Hola texto={myFriend}></Hola>
     <button onClick={incrementar} >Incrementar</button>
     </>
   )
